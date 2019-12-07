@@ -1,0 +1,277 @@
+html{
+	background: #fce3f4; /* Pour les navigateurs qui ne supporte pas les gradients */
+    background: -webkit-linear-gradient(#fce3f4, white); /* Pour Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fce3f4, white); /* Pour Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fce3f4, white); /* Pour Firefox 3.6 to 15 */
+    background: linear-gradient(#fce3f4, white);
+	color:#515050; /*colour pour la police*/
+}
+
+
+body{
+	background: #fcf4f9; /*coulour pour le fond*/
+	max-width: 55vw;
+	margin: auto;
+	font-family: "Times New Roman";
+	font:  Arial, Helvetica, Bookman;
+}
+
+/*MENU*/
+
+nav {
+	margin-top:0;
+	height: 6vw;
+	width: 55vw;
+	/*pour la taille du menu*/
+}
+
+nav ul
+{
+    background: #fce3f4; /* Pour browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fce3f4, #ffedf9); /* Pour Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fce3f4, #ffedf9); /* Pour Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fce3f4, #ffedf9); /* Pour Firefox 3.6 to 15 */
+    background: linear-gradient(#fce3f4, #ffedf9);
+	color:#515050;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	/*les bordeurs*/
+	list-style:none; 
+	float:left; /*pour qu'ils soient tous dans une ligne*/
+	margin:0;
+	padding:0;
+    position:fixed;/*pour etre tout le temps en haut du page*/
+	z-index: 1;/*pour etre devant*/
+	width: 55vw;
+	height: 4.4vw;
+	/*la taille*/
+}
+
+
+nav ul a
+{
+	display:block;
+	color:#333;
+	text-decoration:none;/*pour faire disparaître les points*/
+	font-size:2vw;/*la taille de la police*/
+}
+
+nav ul li
+{
+	position:relative;
+	float:left; /*pour qu'ils soient tous dans une ligne*/
+	margin:0;
+	padding:0;
+	z-index: 1;/*pour etre devant*/
+}
+
+nav ul ul /*le sous menu*/
+{
+	width:13.5vw;
+	height:5.5vw;
+	/*la taille*/
+	display:none; /*pour qu'on ne le voit pas*/
+	position:absolute;/*pour etre sur les autre choses*/
+	left:0;
+    background: rgba(252, 227, 244, 0.7);/*on reduire l'opacite du fond*/
+	padding:0;
+	border-left:1px solid white;
+	border-right:1px solid white;
+	border-top: 0;
+	/*pour les bordeurs*/
+	margin-top:2px;
+}
+
+nav ul ul li
+{
+	float:none;/*pour qu'il ne serais pas a gouche*/
+}
+
+nav ul ul a
+{
+	font-size: 1vw;/*la taille de la police*/
+	padding:0.7vw;
+}
+
+nav ul ul ul/*le sous sous menu*/
+{
+	height: 8vw;
+	width:14vw;
+	/*la taille*/
+	top:0;
+	left:100%;
+	margin:0;
+	border-right:1px solid white;
+}
+
+nav ul ul ul a{
+		font-size: 0.9vw;
+}
+
+nav ul li:hover > ul
+{
+	display:block/*pour voir le sous menu*/
+}
+
+nav li{
+  float: left;
+}
+
+nav li a {
+	
+    display:block;
+    padding: 1.6vw;
+    text-decoration: none;
+	font-size:1vw;
+    color:#515050;
+}
+
+
+nav li a:hover {
+  color:#287ba0;
+  background: #f9dbf0;
+  font-weight:bold;/*la police en gras*/
+  border: 1px outset white;
+}
+
+span{ /*pour le partie ou on est*/
+	color:#3191bc;
+	font-weight:bold;
+}
+
+
+/*PHOTO*/
+figure{ /*L'IMAGE ET TITRE*/
+	width: 100%;
+	margin: 0 auto;
+}
+
+figure img{ /*L'IMAGE*/
+	width: 100%;  /*pour avoir la longeur de body*/
+	height:22vw;
+    border-radius: 5px;   /*avoir les bords bouclés de l'image*/
+}
+
+
+/*POUR LE TEXT SUR LA PHOTO*/
+@font-face { /*le style de police*/
+font-family:myfont;
+src: url(../fontstyle/myfont.TTF); /*le chemin ou se trouve la police*/
+}
+
+figcaption{ /*le text*/
+	font-family: myfont;
+	position: absolute;
+	top: 11vw;
+	left:32vw;
+	font-size: 5vw;
+	color:#f8f9ef;
+	border: 1.5px white solid; /*bordeur*/
+	padding-left: 10vw;
+	padding-right: 10vw;
+	padding-top:3vw;
+	padding-bottom:3vw;        /*padding*/
+}
+
+header {
+	height: 24vw;  
+	width: 100%;      /*pour avoir la longeur de body*/
+}
+
+/*CONTENU*/
+article{
+	border-top: 1px solid black;  /*pour la bordeur*/
+	font-size: 1.1vw;         /*la taille de police*/
+	padding: 1vw;
+}
+
+h2 {
+  margin-left: 2vw;
+}
+	
+article p:nth-of-type(1){ /*pour le 1er paragraphe*/
+	float:left;          /*pour etre a gouche*/
+	max-width: 24vw;
+	display:block;
+	padding-left: 2vw;
+	text-align:justify;
+}
+ 
+article p:nth-of-type(2){    /*pour le 2eme paragraphe*/
+	float:right;            /*pour etre a droite*/
+	max-width: 24vw;
+	display:block;         /*pour etre dans une block*/
+	padding-right: 2vw;
+	padding-bottom:1vw;
+	text-align:justify;    /*pour etre nxn le text*/
+}	
+
+article img:nth-of-type(2){   /*pour a 2eme photo*/
+   width:29vw;
+   height:15vw;
+   /*la taille*/
+   float: right;  /*pour etre a droite*/
+   padding-top:0.3vw;
+   
+}
+
+article img:nth-of-type(1){ /*pour le premier image*/
+   height:18vw;
+   width:22vw;
+   /*la taille*/
+   float:left;  /*pour etre a gouche*/
+   padding-top:1vw;
+   padding-bottom: 2vw;
+   padding-left:1.4vw;
+   /*les padding*/
+}
+
+
+/*FOOTER*/
+footer{
+	height: 7vw;
+	clear: both;    /*pour etre tout seul dans la ligne*/
+	border-top: 1px solid black;	/*la bordeur*/
+	padding-top:0.5vw;
+	font-size:1vw;     /*taille de police*/
+	padding-left:5vw;
+}
+
+
+footer h4{
+	float:left;  /*pour etre a gouche*/
+	padding-right:1vw;
+	padding-left:1vw;
+}
+
+footer img{
+	float:right;  /*pour etre a droite*/
+	clear: left;
+	padding-right: 2vw;
+	max-width: 2vw;
+	height:auto;
+	/*la taille*/
+}
+
+footer h5{
+	float: left;    /*pour etre a gouche*/
+}
+
+
+/* ARTICLE CONDITIONELLE*/
+@media (max-width: 600px){ /*si le fenetre est moins grande que 600px*/
+    article p:nth-of-type(1){   /*pour le premier paragraphe*/
+	float: left;      /*pour etre a gouche*/
+	margin-left:3vw;
+	padding: 0;
+	margin-bottom: 0;
+	padding-left:15vw;
+}
+article p:nth-of-type(2){ /*pour le 2em paragraphe*/
+	padding-left: 18vw;
+	float:left;      /*pour etre a gouche*/
+}	
+article h2{         /*pour le titre*/
+	padding-left: 18vw;
+}
+}
