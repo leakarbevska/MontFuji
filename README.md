@@ -1,2 +1,3 @@
 # MontFuji
-WebSite about Mount Fuji
+
+Simple pure HTML & CSS WebSite about Mount Fuji.
